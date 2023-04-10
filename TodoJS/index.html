@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <section class="todo">
+    <h1>todos</h1>
+    <form class="wrapper">
+        <input required
+        class="new-todo"
+        placeholder="What needs to be done?"
+        autofocus
+        />
+    </form>
+
+    <input class="toggleAll toggleAll-js" id="toggleAll" type="checkbox" />
+    <label for="toggleAll"></label>
+    <ul class="todo-list">
+    </ul>
+
+    <footer class="footer">
+        <div class="filters">
+            <p><span id="count">0</span> items left</p>
+            <ul class="buttons">
+                <li>
+                    <a href="#" data-filter="all" class="selected"> All </a>
+                </li>
+                <li>
+                    <a href="#" data-filter="active"> Active </a>
+                </li>
+                <li>
+                    <a href="#" data-filter="checked"> Completed </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    </section>
+</body>
+</html>
