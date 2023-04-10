@@ -12,6 +12,7 @@ let tasks = []
 if (localStorage.getItem('tasks')){
     tasks = JSON.parse(localStorage.getItem('tasks'))
     tasks.forEach( (task) => renderTask(task))
+    renderTaskCount()
 }
 
 
@@ -89,9 +90,8 @@ function doneTask(event){
 
     //Сохраняем список задач в хранилище LOcalStorage
     saveToLocalStorage()
-    
-    parentNode.classList.toggle('checked')
     renderTaskCount()
+    parentNode.classList.toggle('checked')
 }
 
 function saveToLocalStorage(){
@@ -134,9 +134,9 @@ toggleAll.addEventListener("click", (e) => {
     }
     saveToLocalStorage()
     renderTaskCount()
-});
+})
 
-const renderTaskCount = () =>{
+function renderTaskCount() {
     let counter = 0
     for (let i=0; i < todoItems.length; i++){
         if (!todoItems[i].classList.contains('checked'))
